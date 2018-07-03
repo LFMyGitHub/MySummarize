@@ -54,6 +54,7 @@ handler：表示当拒绝处理任务时的策略
 如果是IO密集型任务，参考值可以设置为2*NCPU
 
 5.Java集合
+![img](https://github.com/LFMyGitHub/MySummarize/blob/master/img/jihe.png)
 按类型分：
 set(集，基于HashMap实现，不能包含有重复元素)
 HashSet：无序，HASH算法存储集合中的元素，具有良好的存取和查找性能
