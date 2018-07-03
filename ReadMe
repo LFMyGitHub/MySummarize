@@ -1,0 +1,39 @@
+1  扎实的JAVA基础，熟练掌握面向对象（OOP）思想，熟悉java序列化机制实现Android下IPC的机制。
+2  熟练使用集合、IO流及多线程断点上传下载,和线程池的使用。
+3  熟练掌握Android四大组件（Activity，Service与intentService，LocalBroadcastManager的BroadcastReceiver，ContentProvider）
+4  熟练使用Android下常用的布局设计，新版本Material Design布局和设计，熟练自定义控件和一些主流的第三方控件的使用等。
+5  熟悉掌握MVC模式，单例、工厂，观察者，模板等设计模式。
+6  熟悉Android下的Handler消息机制（Handler，Message，MessageQueen，Looper，HandlerThread），并能熟练使用Handler和熟悉使用EventBus 3.0和RXandroid机制。
+7  熟悉Android中的动画，选择器，样式和主题的使用，能够实现市面上大多数动画效果。
+8  掌握OOM、ANR异常和各类友盟统计上的BUG的处理和熟练处理App全局Crash异常处理，并可以对应用进行相应的优化。
+9  熟悉Android开发的数据（图片，文字，文件等）的缓存技术，并且能够对图片的优化进行相应的处理，熟悉ASimpleCache，LruCache缓存和DiskLruCache缓存使用。
+10 熟练并能独立解决市面上各种Android机型屏幕的适配（图片适配，Dimens适配和AutoLayout适配等等）。
+11 熟悉XML/JSON数据解析和生成JSON/XML，以及Android下SQLiter数据库存储方式（greendao，ormlite）。
+12 熟练使用市面上主流技术的Android开发常用框架（greedao，ormlite，EventBus3.0，PullToRefresh，Xutils3.0等等）
+13 熟悉android 的JNI/NDK开发，通过JNI实现JAVA与C程序间的调用及回调数据通信。
+14 熟悉掌握RecyclerView，ListView等重要控件的使用和优化及（AsyncTask）异步任务加载网络数据
+15 熟悉Android代码的混淆机制和多渠道打包，和后期的市场发布上线App的BUG修复维护和优化。
+16 熟悉使用支付宝，微信支付的SDK和银行的卡SDK的接入，为App增加支付模块。
+17 熟练使用Android下的GPS定位和（接入百度地图定位SDK实现定位，标记，搜索等功能）
+18 熟悉主流常用的第三方SDK（友盟统计，极光送，QQ和微信的三方登陆和分享SDK，基于讯飞语音的文字和语音的相互转化开发）
+19 熟悉Android环境下的各类手机传感器开发（光传感器，方向传感器等等）
+20 熟悉Android下混合开发，原生App和HTML5的使用，和js交互，数据通信。
+21 熟练使用Android开发中重要模块的开发如:网络请求（AsyncHttpClient，Volley，OkHtttp，NoHttp，Xutils3.0里的网络请求API等）
+22 熟练使用Android开发中图片处理（imageloarder，fresco，picasso，Xutils3.0里的图片加载API等）。
+23 熟悉Android5.0和6.0新特性（RecyclerView，MD设计，ART模式等）。
+24 熟悉安卓App的线上App的热修复技术（Andfix和Hotfix），熟练使用的Hotfix热修复功能。
+25 熟练掌握SVN版本控制工具及Eclipse、尤其是Android Studio和Studio下的DEBUG调试工具的使用。
+26 熟练处理Activity和Fragment和ViewPage的配合使用，并能熟练处理Activity和Fragment，Fragment和Fragment之间的通信。
+27 熟悉Android的二维码开发，生成码和解析码，扫描码的开发。
+28 熟悉安卓技术中的视频播放开发技术（videoview，MediaPlayer ，Vitamo，VLC）。
+29 熟练使用代码质量检测工具FindBugs和内存泄漏检测工具 LeakCanary，更好的修正代码质量。
+30 熟练掌握Android手机中的3G/蓝牙/wifi的网络通信机制。
+31 熟悉Android下网络通信技术，对Socket通信、TCP/IP、Http有一定的了解和熟练使用。
+32 熟练使用ContentProvider来获取和更改手机系统中通讯录、短信的数据。
+33 熟悉基于Xmpp通信协议的IM（即时通信）开发，和第三方IM的开发SDK（融云SDK等）。
+34 熟悉掌握Android系统下的广播（耳机的插拔，网络状态变化等）的相关功能开发。
+35 熟悉Android下数据的加解密base64，DES,MD5加密和9patch图制作来完成UI，熟悉Android图像处理之Bitmap类。
+36 熟悉界面间的数据传递（intent和EventBus3.0等等），进程间通信(AIDL,文件共享等等）。
+37 熟练掌握Android中的多点触控（手势识别器）、熟悉Android下View的事件分发机制与并能处理滑动事件冲突处理。
+38 熟悉App（需求，评审，开发，测试，打包，发布市场，后期维护和迭代等一系列流程）和独立开发经验。
+39 良好的开发习惯，一心追求流畅顺滑的UI体验，对代码有洁癖.
