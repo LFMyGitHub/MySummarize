@@ -128,3 +128,4 @@ Collection和Map
 年轻代的对象还存活的话，就会被移动到年老代，年老代的回收比较耗时，回收频率较低，回收成本较大。
 
 7.设计模式
+https://github.com/LFMyGitHub/MySummarize/tree/master/designpatterns
