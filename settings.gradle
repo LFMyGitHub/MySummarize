@@ -1,1 +1,1 @@
-include ':app', ':javalib', ':designpatterns'
+include ':app', ':javalib', ':designpatterns', ':httplibrary'
