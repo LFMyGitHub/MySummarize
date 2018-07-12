@@ -121,12 +121,12 @@ public class HttpClientUtils {
         }
     }
 
-    public void useHttpClientGetThread() {
+    public static void useHttpClientGetThread(final String path) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 HttpClientUtils httpClientUtils = new HttpClientUtils();
-                httpClientUtils.useHttpClientGet("http://www.people.com.cn/");
+                httpClientUtils.useHttpClientGet(path);
             }
         }).start();
     }

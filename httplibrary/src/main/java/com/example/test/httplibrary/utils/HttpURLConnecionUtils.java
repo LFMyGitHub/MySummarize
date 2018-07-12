@@ -103,7 +103,7 @@ public class HttpURLConnecionUtils {
         return respose;
     }
 
-    public void sendRequestWithHttpURLConnection() {
+    public static void sendRequestWithHttpURLConnection(final String path) {
         //开启线程来发起网络请求
         new Thread(new Runnable() {
             @Override
@@ -111,7 +111,7 @@ public class HttpURLConnecionUtils {
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try {
-                    URL url = new URL("http://apis.baidu.com/txapi/weixin/wxhot?num=10&page=1&word=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0");
+                    URL url = new URL(path);
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);
@@ -124,7 +124,7 @@ public class HttpURLConnecionUtils {
                     while ((line = reader.readLine()) != null) {
                         response.append(line);
                     }
-                    Log.i("TAG", "----------------------" + response.toString());
+                    Log.i("TAG", "HttpURLConnection请求：" + response.toString());
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {

@@ -1,10 +1,5 @@
 package com.example.test.httplibrary;
 
-import com.example.test.httplibrary.utils.HttpClientUtils;
-import com.example.test.httplibrary.utils.HttpURLConnecionUtils;
-
-import java.net.HttpURLConnection;
-
 /**
  * 【类功能说明】
  * ...
