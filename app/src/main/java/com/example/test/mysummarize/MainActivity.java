@@ -13,6 +13,7 @@ import com.example.test.httplibrary.inter.ResultCallback;
 import com.example.test.httplibrary.utils.HttpClientUtils;
 import com.example.test.httplibrary.utils.HttpURLConnecionUtils;
 import com.example.test.httplibrary.utils.OkHttp2Utils;
+import com.example.test.httplibrary.utils.OkHttp3Utils;
 import com.example.test.httplibrary.utils.OkHttpEngine;
 import com.example.test.httplibrary.utils.VolleyUtils;
 import com.squareup.okhttp.Request;
@@ -66,5 +67,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("TAG", "OkHttpEngine请求成功");
             }
         });
+        OkHttp3Utils.getAsynHttp("http://www.people.com.cn/");
+        OkHttp3Utils.postAsynFile("");
+        OkHttp3Utils.downAsynFile("http://img5.mtime.cn/mg/2016/12/26/164311.99230575.jpg");
     }
 }

@@ -137,7 +137,7 @@ BasicNetwork：
 调用的是HttpStack的performRequest()方法请求网络，接下来根据不同的响应状态码来返回不同的NetworkResponse
 HttpStack也是一个接口，实现它的两个类HurlStack和HttpClientStack
 
-网络框架OkHttp
+网络框架OkHttp2.x
 会从很多常用的连接问题中自动恢复
 ex：如果服务器配置了多个IP地址，当第一个IP连接失败时，OkHttp会自动尝试下一个IP
 处理了代理服务器问题和SSL握手失败问题
@@ -156,6 +156,11 @@ setReadTimeout
 1.避免重复代码调用
 2.请求结果回调到UI线程中
 
+网络框架OkHttp3
+异步GET请求与2.x一样
+异步POST请求差别是没有FormEncodingBuilder这个类，替代它的是功能更加强大的FormBody
+异步上传文件(POST请求)
+异步下载文件
 
 
 
