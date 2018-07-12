@@ -16,3 +16,90 @@ port指定一个端口号，为空则默认使用端口80
 abs_path指定请求资源的URI
 
 HTTP请求报文
+https://github.com/LFMyGitHub/MySummarize/blob/master/httplibrary/src/main/res/drawable/http_request.jpg
+一般格式：请求行、请求报头、空行、请求数据4个部分组成。
+请求行：请求方法、URL字段和HTTP协议版本组成
+格式：Method Request-URI HTTP-Version CRLF
+Method表示请求方法
+Request-URI是一个统一资源标识符
+HTTP-Version表示请求的HTTP协议版本
+CRLF表示回车和换行(除作为结尾的CRLF外，不允许出现单独的CR或LF字符)
+HTTP八种请求方法：
+1.GET：请求获取Request-URI所标识的资源
+2.POST：在Request-URI所标识的资源后附加新的数据
+3.HEAD：请求获取Request-URI所标识的资源的响应消息报头
+4.PUT：请求服务器存储一个资源，并用Request-URI作为其标识
+5.DELETE：请求服务器删除Request-URI所标识的资源
+6.TRACE：请求服务器回送收到的请求信息，主要用于测试或诊断
+7.CONNECT：HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器
+8.OPTIONS：请求查询服务器的性能，或者查询与资源相关的选项和需求
+ex:GET http://xxxxx HTTP/1.1
+请求报头：
+在请求行之后会有0个或多个请求报头，每个请求报头包含一个名字和值，用:分割。请求报头以一个空行发送回车和
+换行符通知服务器以下不会有请求报头。
+请求数据：
+请求数据不在GET方法中使用，而是在POST方法中使用。POST方法适用于需要客户填写表单的场合，与请求数据相关
+的最常用的请求头是Content-Type和Content-Length
+
+HTTP响应报文
+https://github.com/LFMyGitHub/MySummarize/blob/master/httplibrary/src/main/res/drawable/http_reponse.jpg
+一般格式：由状态行、消息报头、空行、响应正文组成。
+状态行
+格式：HTTP-Version Status-Code Reason-Phrase CRLF
+HTTP-Version表示服务器HTTP协议的版本；Status-Code表示服务器发回的响应状态代码；Reason-Phrase表示状态代码的文本描述
+状态码由三个数字组成，第一个数字定义了响应的类别，且有五中可能：
+100-199：指示信息，表示请求已接收，继续处理
+200-299：请求成功，表示请求已被成功接收，理解，接受
+300-399：重定向，要完成请求必须要进行更进一步的操作
+400-499：客户端错误，请求有语法错误，或请求无法实现
+500-599：服务器端错误，服务器未能实现合法的请求
+常见状态码：
+200 OK：客户端请求成功
+400 Bad Request：客户端请求有语法错误，不能被服务端理解
+401 Unauthorized：请求未经授权，这个状态码必须和WWW-Authenticate报头域一起使用
+403 Forbidden：服务器收到请求，拒绝提供服务
+500 Internal Server Error：服务器发生不可预期的错误
+503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常
+ex：HTTP/1.1 200 OK
+
+HTTP消息报头
+通用报头：既可以出现在请求报头，也可以出现响应报头中
+Date：消息产生的时间和日期
+Connection：允许发送指定连接的选项，例如指定连接是连续的，或者指定close选项，通知服务器在响应完成之后关闭连接。
+Cache-Control：指定缓存指令，缓存指令是单向的(响应中出现的缓存指令在请求中未必会出现)，且是独立的(一个消息的缓存指令不会影响另一个消息处理的缓存机制)
+请求报头：通知服务器关于客户端请求的信息
+典型请求头：
+Host：请求的主机名，允许多个域名同处一个IP地址，即虚拟主机
+User-Agent：发送请求的浏览器类型、操作系统等信息
+Accept：客户端可识别的内容类型列表，用于指定客户端接收哪些类型的信息
+Accept-Encoding：客户端可识别的数据编码
+Accept-Language：表示浏览器所支持的语言类型
+Connection：允许客户端或服务器指定与请求/响应连接有关的选项，例如设置为Keep-Alive则表示保持连接
+Transfer-Encoding：告知接收端为保证报文的可靠传输，对报文采用什么编码方式
+响应报头：服务器传递自身信息的响应
+常见响应报头：
+Location：用于重定向接受者到一个新位置，常用在更换域名的时候
+Server：包含服务器用来处理请求的系统信息，与User-Agent请求报头对应
+实体报头：定义被传输资源的信息，可以用于请求，也可以用于响应
+常用实体报头：
+Content-Type：指明发送给接受者的实体正文的媒体类型(MIME)
+Content-Length：实体正文的长度
+Content-Language：描述资源所用的自然语言，没有设置则认为实体内容将提供给所有的语言阅读
+Content-Encoding：指明数据的压缩方式，因而要获得Content-Type报头域中所引用的媒体类型必须采用相应的解码机制。
+Last-Modified：指示资源的最后修改日期
+Expires：实体报头给出响应过期的时间和日期
+
+利用Fiddler工具进行网络数据抓包
+
+HttpClient与HttpURLConnection
+HttpClient：
+Android SDK中包含了HttpClient，在Android6.0版本删除了该类库，如果仍想使用解决办法是：
+Eclipse：在libs中加入org.apache.http.legacy.jar(**sdk/platforms/android-23/optional目录下)
+Android Studio：相应module下build.gradle中加入：
+android{
+    useLibrary 'org.apache.http.legacy'
+}
+
+HttpURLConnecion
+
+
