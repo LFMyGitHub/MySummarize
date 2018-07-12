@@ -1,7 +1,6 @@
 package com.example.test.httplibrary.utils;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -102,13 +101,16 @@ public class OkHttp3Utils {
                 .url(path)
                 .post(RequestBody.create(MEDIA_TYPE_MARKDOWN, file))
                 .build();
+        mOkHttpClient.sslSocketFactory();
         mOkHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
+                //好像是https证书问题
+                Log.i("TAG","OkHttp3异步上传文件失败"+e.getMessage().toString());
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                    Log.i("TAG","OkHttp3异步上传文件"+response.body().string());
+                Log.i("TAG","OkHttp3异步上传文件成功"+response.body().string());
             }
         });
     }
@@ -137,11 +139,11 @@ public class OkHttp3Utils {
                         fileOutputStream.write(buffer, 0, len);
                     }
                     fileOutputStream.flush();
+                    Log.d("TAG", "OkHttp3文件下载成功");
                 } catch (IOException e) {
                     Log.i("TAG", "OkHttp3 IOException");
                     e.printStackTrace();
                 }
-                Log.d("TAG", "OkHttp3文件下载成功");
             }
         });
     }

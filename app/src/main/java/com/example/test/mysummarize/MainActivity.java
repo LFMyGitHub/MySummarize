@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         OkHttp3Utils.getAsynHttp("http://www.people.com.cn/");
-        OkHttp3Utils.postAsynFile("");
+        OkHttp3Utils.postAsynFile("https://github.com/LFMyGitHub/MySummarize/tree/master/raw");
         OkHttp3Utils.downAsynFile("http://img5.mtime.cn/mg/2016/12/26/164311.99230575.jpg");
     }
 }

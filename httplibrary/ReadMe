@@ -157,10 +157,12 @@ setReadTimeout
 2.请求结果回调到UI线程中
 
 网络框架OkHttp3
-异步GET请求与2.x一样
-异步POST请求差别是没有FormEncodingBuilder这个类，替代它的是功能更加强大的FormBody
-异步上传文件(POST请求)
+异步GET请求：与2.x一样
+异步POST请求：差别是没有FormEncodingBuilder这个类，替代它的是功能更加强大的FormBody
+异步上传文件(POST请求)：证书问题
 异步下载文件
+设置超时时间和缓存：不能通过OkHttpClient直接设置超时时间和缓存了，而是通过OkHttpClient.Builder来设置
+取消请求和封装：与OkHttp2.x一样
 
 
 
