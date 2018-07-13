@@ -15,6 +15,7 @@ import com.example.test.httplibrary.utils.HttpURLConnecionUtils;
 import com.example.test.httplibrary.utils.OkHttp2Utils;
 import com.example.test.httplibrary.utils.OkHttp3Utils;
 import com.example.test.httplibrary.utils.OkHttpEngine;
+import com.example.test.httplibrary.utils.RetrofixUtils;
 import com.example.test.httplibrary.utils.VolleyUtils;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -70,5 +71,7 @@ public class MainActivity extends AppCompatActivity {
         OkHttp3Utils.getAsynHttp("http://www.people.com.cn/");
         OkHttp3Utils.postAsynFile("https://github.com/LFMyGitHub/MySummarize/tree/master/raw");
         OkHttp3Utils.downAsynFile("http://img5.mtime.cn/mg/2016/12/26/164311.99230575.jpg");
+
+        RetrofixUtils.getTBIpInfomation("116.236.185.64");
     }
 }
