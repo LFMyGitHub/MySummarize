@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义圆环属性-->
+    <declare-styleable name="SuperCircleView">
+        <!-- 小圆半径 -->
+        <attr name="small_circle_radius" format="integer"></attr>
+        <!-- 圆环宽度 -->
+        <attr name="ring_width" format="float"></attr>
+        <!-- 圆环段数 -->
+        <attr name="segmentation" format="integer"></attr>
+        <!-- 每段间隔的角度 -->
+        <attr name="segmentation_angle" format="integer"></attr>
+        <!-- 小圆的颜色 -->
+        <attr name="min_circle_color" format="color"></attr>
+        <!-- 大圆的颜色 -->
+        <attr name="max_circle_color" format="color"></attr>
+        <!-- 圆环默认颜色 -->
+        <attr name="ring_normal_color" format="color"></attr>
+        <!-- 圆环要显示的彩色的区域-->
+        <attr name="ring_color_select" format="integer"></attr>
+        <!-- 是否显示分段区域 -->
+        <attr name="is_show_segmentation" format="boolean"></attr>
+    </declare-styleable>
+</resources>
