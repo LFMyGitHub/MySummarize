@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">customizeviewlibrary</string>
-    <string name="str1">%1s\n参与/天</string>
-    <string name="str2">%1s\n兑换/次</string>
-    <string name="str3">%1s\n金币/枚</string>
-    <string name="str4">对应时间段达到1000步后，即可随机兑\n换100~990金币</string>
-</resources>

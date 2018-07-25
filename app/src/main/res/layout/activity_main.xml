@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
     <com.android.volley.toolbox.NetworkImageView
@@ -12,4 +13,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:visibility="gone" />
+
+    <com.widget.behavior.CustomConvenientBanner
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:canLoop="true"/>
 </LinearLayout>

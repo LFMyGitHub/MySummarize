@@ -1,9 +1,9 @@
 package com.example.test.mysummarize;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import com.example.customizeviewlibrary.activity.RingActivity;
+
+import com.widget.view.StepArcView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +14,5 @@ public class MainActivity extends AppCompatActivity {
 
         //NetworkImageView nv_image = findViewById(R.id.nv_image);
         //TestUtils.testHttp(this, nv_image);
-
-        startActivity(new Intent(this, RingActivity.class));
     }
 }

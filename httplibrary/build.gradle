@@ -42,4 +42,6 @@ dependencies {
     api 'com.squareup.retrofit2:converter-gson:2.1.0'
     //ConverterFactory的String依赖包
     api 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    //RxJava
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
 }
