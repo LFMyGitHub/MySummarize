@@ -1,0 +1,20 @@
+Android四大组件
+Activity(系统通过任务栈[后进先出]管理Activity)
+    生命周期：https://github.com/LFMyGitHub/MySummarize/blob/master/img/img_activity_life.jpg
+    启动方式：standard[每次都开启一个activity]、singleTask[同一个任务栈里只有一个实例,与singleTop类似
+    已位于栈顶不再启动，但会移除不位于栈顶的activity]、singleTop[位于栈顶的不在启动，即不再走onCreat方法，会走onNewIntent
+    方法]、singleInstance[一个任务栈有且只有一个实例]
+    数据传递：
+    ①基于消息通信机制--Intent：基本数据类型和对象[必须序列化]
+    Serializable：基于反射，运行时占用内存大[java自带直接实现]
+    Pacelable：基于分解，执行效率高[android特有接口]
+    ②使用static静态变量传递数据
+    ③全局变量Application
+    ④剪切板(ClipboardManager)
+    ⑤基于外部存储传输(File/Preferences/SQLite，针对第三方应用content provider)
+    ⑥基于Ipc通信机制(context与service之间的传递)
+Service
+BroadcastReceiver
+ContentProvider
+
+Google 新出的约束布局ConstraintLayout[了解一下，听说很强大]
