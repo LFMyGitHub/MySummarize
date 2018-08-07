@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion build_version.target_sdk
 
 
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion build_version.min_sdk
+        targetSdkVersion build_version.target_sdk
         versionCode 1
         versionName "1.0"
 
@@ -26,5 +26,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api project(path: ':commonlibrary')
+    api project(path: ':common')
+
+    annotationProcessor deps.arouter_compiler
 }

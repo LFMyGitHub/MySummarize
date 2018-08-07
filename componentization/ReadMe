@@ -1,0 +1,21 @@
+组件化开发：
+1.组件模式和集成模式转换
+Android Studio中Module主要有两种属性：Application、Library
+在gradle.properties中定义一个常量,根据常量值设置Module类型
+2.组件之间AndroidManifest合并
+组件化项目中创建一个manifest文件，gradle设置不同模式下的引用路径
+3.全局Context的获取及组件数据初始化
+公共组件中新建BaseApplication，其它组件中新建debug包创建application类继承BaseApplication
+并在gradle中设置集成开发模式下排查debug下所有class文件
+4.library依赖问题
+根据组名和包名排除重复的库引用
+exclude module: 'support-v4'//根据组件名排除
+exclude group: 'android.support.v4'//根据包名排除
+5.组件之间调用和通信(路由)
+①在gradle中添加依赖
+②了解APT(Annotation Processing Tool)概念
+APT是一种处理注解的工具，它对源代码文件进行检测找出其中的Annotation，使用Annotation进行额外的处理。
+Annotation处理器在处理Annotation时可以根据源文件中的Annotation生成额外的源文件和其它的文件(文件具
+体内容由Annotation编写者决定)，APT还会编译生成的源文件和原来的源文件，将它们一起生成class文件。
+6.工程build.gradle与gradle.properties文件
+①组件化工程build.gradle文件

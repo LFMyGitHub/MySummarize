@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">commonlibrary</string>
+    <string name="router">路由跳转</string>
+</resources>

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion build_version.target_sdk
 
 
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion build_version.min_sdk
+        targetSdkVersion build_version.target_sdk
         versionCode 1
         versionName "1.0"
 
@@ -27,21 +27,5 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api project(path: ':commonlibrary')
-
-    //网络通信库volley
-    api 'com.mcxiaoke.volley:library:1.0.19'
-
-    //OkHttp2.x
-    api 'com.squareup.okhttp:okhttp:2.7.5'
-    //OkHttp3
-    api 'com.squareup.okhttp3:okhttp:3.2.0'
-    api 'com.squareup.okio:okio:1.7.0'
-    //Retrofit2
-    api 'com.squareup.retrofit2:retrofit:2.1.0'
-    api 'com.squareup.retrofit2:converter-gson:2.1.0'
-    //ConverterFactory的String依赖包
-    api 'com.squareup.retrofit2:converter-scalars:2.1.0'
-    //RxJava
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api project(path: ':common')
 }

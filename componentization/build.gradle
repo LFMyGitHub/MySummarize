@@ -1,13 +1,31 @@
-apply plugin: 'com.android.application'
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion build_version.target_sdk
+
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+
     defaultConfig {
-        applicationId "com.example.test.mysummarize"
         minSdkVersion build_version.min_sdk
         targetSdkVersion build_version.target_sdk
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
@@ -16,19 +34,19 @@ android {
             }
         }
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
-    api project(path: ':httplibrary')
-    api project(path: ':common')
-    api project(path: ':componentization')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    api project(path: ':common')
     annotationProcessor deps.arouter_compiler
 }
