@@ -1,1 +1,1 @@
-include ':app', ':javalib', ':designpatterns', ':httplibrary', ':common', ':androidlibrary', ':componentization'
+include ':app', ':javalib', ':designpatterns', ':httplibrary', ':common', ':androidlibrary', ':componentization', ':main'

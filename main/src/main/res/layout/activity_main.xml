@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.main.activity.MainActivity"
+    android:orientation="vertical"
+    >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/nv_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <com.common.widget.behavior.CustomConvenientBanner
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:canLoop="true"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_router"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/router"
+        />
+</LinearLayout>
