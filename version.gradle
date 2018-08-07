@@ -2,21 +2,50 @@
 ext.deps = [:]
 
 def versions = [:]
+versions.layout = "1.1.2"
 versions.runner = "1.0.2"
-//Arouter
+versions.espresso = "3.0.2"
+versions.junit = "4.12"
+versions.convenientbanner = "2.0.5"
+versions.volley = "1.0.19"
+versions.okhttp = "2.7.5"
+versions.okhttp3 = "3.2.0"
+versions.okio = "1.7.0"
+versions.retrofit = "2.1.0"
+versions.gson = "2.1.0"
+versions.scalars = "2.1.0"
+versions.rxjava2 = "2.3.0"
 versions.arouter_compiler = "1.1.4"
 versions.arouter_api = "1.3.1"
 
 def deps = [:]
-
 def support = [:]
+support.junitrunner = "android.support.test.runner.AndroidJUnitRunner"
+support.layout = "com.android.support.constraint:constraint-layout:$versions.layout"
 support.appcompat = "com.android.support:appcompat-v7:28.0.0-alpha3"
 support.runner = "com.android.support.test:runner:$versions.runner"
+support.espresso = "com.android.support.test.espresso:espresso-core:$versions.espresso"
+support.junit = "junit:junit:$versions.junit"
 deps.support = support
 
+def okHttp = [:]
+okHttp.okhttp = "com.squareup.okhttp:okhttp:$versions.okhttp"
+okHttp.okhttp3 = "com.squareup.okhttp3:okhttp:$versions.okhttp3"
+okHttp.okio = "com.squareup.okio:okio:$versions.okio"
+deps.okHttp = okHttp
+
+def retrofit = [:]
+retrofit.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.gson"
+retrofit.scalars = "com.squareup.retrofit2:converter-scalars:$versions.scalars"
+retrofit.rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.rxjava2"
+deps.retrofit = retrofit
+
+deps.volley = "com.mcxiaoke.volley:library:$versions.volley"
+deps.convenientbanner = "com.bigkoo:convenientbanner:$versions.convenientbanner"
 deps.arouter_api = "com.alibaba:arouter-api:$versions.arouter_api"
 deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
-
+deps.legacy = "org.apache.http.legacy"
 ext.deps = deps
 
 def build_version = [:]

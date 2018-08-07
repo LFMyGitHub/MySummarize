@@ -9,7 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner deps.support.junitrunner
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -29,30 +29,30 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.android.support.constraint:constraint-layout:1.1.2'
+    api deps.support.layout
     api deps.support.appcompat
-    testImplementation 'junit:junit:4.12'
+    testImplementation deps.support.junit
     androidTestImplementation deps.support.runner
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation deps.support.espresso
 
     //banner轮播
-    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation deps.convenientbanner
 
     //网络通信库volley
-    api 'com.mcxiaoke.volley:library:1.0.19'
+    api deps.volley
 
     //OkHttp2.x
-    api 'com.squareup.okhttp:okhttp:2.7.5'
+    api deps.okHttp.okhttp
     //OkHttp3
-    api 'com.squareup.okhttp3:okhttp:3.2.0'
-    api 'com.squareup.okio:okio:1.7.0'
+    api deps.okHttp.okhttp3
+    api deps.okHttp.okio
     //Retrofit2
-    api 'com.squareup.retrofit2:retrofit:2.1.0'
-    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api deps.retrofit.retrofit
+    api deps.retrofit.gson
     //ConverterFactory的String依赖包
-    api 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    api deps.retrofit.scalars
     //RxJava
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api deps.retrofit.rxjava2
 
     //路由
     api deps.arouter_api
