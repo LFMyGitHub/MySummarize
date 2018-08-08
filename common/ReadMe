@@ -1,0 +1,6 @@
+基类库
+repository:管理网络数据和本地数据(引用GreenDao库进行数据库操作)
+mvp:mvp基本框架(Retrofit2+RxJava2+RxLifecycle2)
+bean:每个组件的数据实体
+utils:通用工具类
+

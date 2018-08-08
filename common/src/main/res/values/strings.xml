@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">commonlibrary</string>
     <string name="router">路由跳转</string>
+    <string name="str_error">网络加载失败，请点击重试</string>
+    <string name="str_loading">正在加载，请稍后..........</string>
+    <string name="str_null">暂时没有数据，请点击重试</string>
 </resources>

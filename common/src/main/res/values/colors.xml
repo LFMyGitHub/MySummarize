@@ -11,6 +11,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="guide_pages">#88000000</color>
+    <color name="base_color_text_black">#232121</color>
 
     <color name="mine_bg">#5096a5ae</color>
 

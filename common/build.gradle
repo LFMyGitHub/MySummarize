@@ -25,6 +25,10 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -53,8 +57,15 @@ dependencies {
     api deps.retrofit.scalars
     //RxJava
     api deps.retrofit.rxjava2
+    api deps.retrofit.rxlifecycle
+    api deps.retrofit.rxlifecycle_components
 
     //路由
     api deps.arouter_api
     annotationProcessor deps.arouter_compiler
+
+    //数据库
+    api deps.greendao
+    //图片加载
+    api deps.glide
 }

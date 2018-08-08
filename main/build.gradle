@@ -47,9 +47,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api project(path: ':httplibrary')
     api project(path: ':common')
-    api project(path: ':componentization')
-
+    api project(path: ':httplibrary')
+    if(!isModule.toBoolean()){
+        api project(path: ':componentization')
+    }
     annotationProcessor deps.arouter_compiler
 }

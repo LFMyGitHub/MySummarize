@@ -31,8 +31,8 @@ android {
 dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     api project(path: ':common')
+    api project(path: ':httplibrary')
     if (!isModule.toBoolean()) {
-        api project(path: ':httplibrary')
         api project(path: ':componentization')
         api project(path: ':main')
     }
