@@ -1,5 +1,8 @@
 package com.designpatterns;
 
+import com.designpatterns.factory.Cricle;
+import com.designpatterns.factory.Shape;
+import com.designpatterns.factory.ShapeFactroy;
 import com.designpatterns.singleton.CEO;
 import com.designpatterns.singleton.Company;
 import com.designpatterns.singleton.Staff;
@@ -34,5 +37,15 @@ public class MethodClass {
         company.addStaff(staff2);
         company.showAllStaff();
         System.out.println();
+    }
+
+    public void testFacroty(){
+        ShapeFactroy shapeFactroy = new ShapeFactroy();
+        Shape shape1 = shapeFactroy.getShape("Cricle");
+        shape1.draw();
+        Shape shape2 = shapeFactroy.getShape("Square");
+        shape2.draw();
+        Shape shape3 = shapeFactroy.getShape("Rectangle");
+        shape3.draw();
     }
 }

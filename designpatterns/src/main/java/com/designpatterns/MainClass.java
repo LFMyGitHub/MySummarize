@@ -24,5 +24,7 @@ public class MainClass {
         System.out.println();
         //DCL模式
         //静态内部类模式
+
+        methodClass.testFacroty();
     }
 }
